@@ -25,7 +25,7 @@
   --radical-red: hsl(346, 100%, 58%);
   --white_a9: hsla(0, 0%, 100%, 0.09);
   --white_a15: hsla(0, 0%, 100%, 0.15);
-  --white_a25: hsla(0, 0%, 100%, 0.25);
+  --white_a25: hsl(0, 0%, 100%);
   --white_a50: hsla(0, 0%, 100%, 0.5);
   --white_a70: hsla(0, 0%, 100%, 0.7);
   --white_a75: hsla(0, 0%, 100%, 0.75);
@@ -70,7 +70,7 @@
    * spacing
    */
 
-  --section-padding: 60px;
+  --section-padding: 10px;
 
   /**
    * shadow
@@ -109,8 +109,8 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -516,7 +516,10 @@ top: auto;
 \*-----------------------------------*/
 
 .seccion1{
-  width: 100%;
+
+  overflow: hidden;
+  display: flex;
+  margin: 0% 4%;
 }
 
 .hero-slider {
@@ -901,7 +904,7 @@ height: 100vh;
   #FOOTER
 \*-----------------------------------*/
 
-.footer { position: relative; }
+.footer { position: relative; background-color: #000; }
 
 .footer .abs-img { display: none; }
 

@@ -16,6 +16,22 @@
 
 <body>
     <div id='product3d' data-rotate-tool='{"path":"","gaData":"","id":"maletaexample"}'> </div>
+	<script>
+		// Seleccionar todas las imágenes en la página
+		const imagenes = document.querySelectorAll('img');
+	
+		// Iterar sobre cada imagen y agregar el atributo draggable="false"
+		imagenes.forEach(function (imagen) {
+		  imagen.setAttribute('draggable', 'false');
+		});
+	
+		// Deshabilitar el menú contextual en todas las imágenes
+		document.addEventListener('contextmenu', function (event) {
+		  if (event.target.tagName === 'IMG') {
+			event.preventDefault();
+		  }
+		});
+	  </script>
 	<script type="text/javascript" src="rotatetool.js"></script>
 </body>
 </html>

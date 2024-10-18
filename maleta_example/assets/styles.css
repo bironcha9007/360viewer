@@ -44,7 +44,7 @@ div.rotate-tool-button.rotate-tool-button-start:hover
 
 
 div.rotate-tool-button-play{
-    left: 5px;
+    left: 5%;
     bottom: 5px;
     background-image: url(button-play.png);
 }
@@ -86,14 +86,14 @@ div.rotate-tool-button-zoom-out{
 }
 
 div.rotate-tool-button-fullscreen{
-    right: 5px;
+    right: 5%;
     bottom: 5px;
     background-image: url(button-fullscreen.png);
 }
 
 
 div.rotate-tool-button-fullscreen{
-    right: 5px;
+    right: 5%;
     bottom: 5px;
     background-image: url(button-fullscreen.png);
 }

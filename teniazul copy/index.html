@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        video {
+            width: 100vw;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <video id="my-video" autoplay loop muted>
+        <source src="../assets/videos/video9.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        var video = document.getElementById('my-video');
+        var isPlaying = true;
+        var playbackRate = 1.0;
+
+        function adjustPlaybackRate(event) {
+            var scrollSpeed = 0.01; // Ajusta la velocidad de reproducción según el desplazamiento del scroll
+            var delta = event.deltaY || -event.wheelDelta || event.detail;
+            playbackRate += scrollSpeed * delta;
+            playbackRate = Math.round(playbackRate * 100) / 100; // Redondea la velocidad a dos decimales
+            playbackRate = Math.max(0.5, Math.min(4.0, playbackRate)); // Limitar la velocidad de reproducción entre 0.5 y 4.0
+            video.playbackRate = playbackRate;
+            if (playbackRate === 0) {
+                video.pause();
+                isPlaying = false;
+            } else {
+                if (!isPlaying) {
+                    video.play();
+                    isPlaying = true;
+                }
+            }
+        }
+
+        window.addEventListener('wheel', function(event) {
+            event.preventDefault(); // Evitar el desplazamiento de la página
+            adjustPlaybackRate(event);
+        }, { passive: false }); // Establecer el event listener como activo
+
+        // Agregar evento de clic para detener/continuar la reproducción del video
+        video.addEventListener('click', function() {
+            if (isPlaying) {
+                video.pause();
+                isPlaying = false;
+            } else {
+                video.play();
+                isPlaying = true;
+            }
+        });
+    </script>
+</body>
+</html>

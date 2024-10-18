@@ -24,9 +24,5 @@ $(document).ready(function() {
   }, 8000);
 
   // Reproducir el video al tocar la pantalla en dispositivos iOS
-  $(document).on('touchstart', function() {
-    if (video.paused) {
-      video.play();
-    }
-  });
+
 });

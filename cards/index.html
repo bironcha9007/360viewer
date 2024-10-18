@@ -54,9 +54,23 @@
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
-    </div>
-  </section>
-<!-- partial -->
+</section>
+<!-- partial -->  <script>
+    // Seleccionar todas las imágenes en la página
+    const imagenes = document.querySelectorAll('img');
+
+// Iterar sobre cada imagen y agregar el atributo draggable="false"
+imagenes.forEach(function (imagen) {
+  imagen.setAttribute('draggable', 'false');
+});
+
+// Deshabilitar el menú contextual en todas las imágenes
+document.addEventListener('contextmenu', function (event) {
+  if (event.target.tagName === 'IMG') {
+    event.preventDefault();
+  }
+});
+</script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script><script  src="./script.js"></script>
 
 </body>

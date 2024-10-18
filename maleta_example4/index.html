@@ -27,5 +27,21 @@
         height="375">
         <p>Your browser does not support iframes.</p>
     </iframe>
+    <script>
+        // Seleccionar todas las imágenes en la página
+        const imagenes = document.querySelectorAll('img');
+    
+        // Iterar sobre cada imagen y agregar el atributo draggable="false"
+        imagenes.forEach(function (imagen) {
+          imagen.setAttribute('draggable', 'false');
+        });
+    
+        // Deshabilitar el menú contextual en todas las imágenes
+        document.addEventListener('contextmenu', function (event) {
+          if (event.target.tagName === 'IMG') {
+            event.preventDefault();
+          }
+        });
+      </script>
 </body>
 </html>

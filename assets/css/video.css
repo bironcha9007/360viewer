@@ -11,7 +11,7 @@
     --radical-red: hsl(346, 100%, 58%);
     --white_a9: hsla(0, 0%, 100%, 0.09);
     --white_a15: hsla(0, 0%, 100%, 0.15);
-    --white_a25: hsla(0, 0%, 100%, 0.25);
+    --white_a25: hsl(0, 0%, 100%);
     --white_a50: hsla(0, 0%, 100%, 0.5);
     --white_a70: hsla(0, 0%, 100%, 0.7);
     --white_a75: hsla(0, 0%, 100%, 0.75);
@@ -470,7 +470,7 @@ font-weight: var(--fs-7);
     margin: 2%;
     display: block;
 
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
 
  
   }
@@ -491,7 +491,7 @@ font-weight: var(--fs-7);
     justify-content: center;
     width: 100%;
     background-color: rgba(240, 35, 35, 0);
-    border: 1px solid #0000004e;
+
     margin: 2%;
   }
 
@@ -505,8 +505,8 @@ font-weight: var(--fs-7);
   .thumbnail img {
     width: 150px;
     height: auto;
-    border: 1px solid #ffffff;
-    border-radius: 5px; }
+
+   }
   
 
   .thumbnail.active img {
@@ -521,10 +521,9 @@ font-weight: var(--fs-7);
     align-items: flex-start;
     padding: 0%;
   
-    border-radius: 5px;
-    margin: 5px;
-    margin-top:20px ;
-    background-color: rgb(0, 0, 0);
+
+;
+    background-color: rgb(255, 255, 255);
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
@@ -719,7 +718,7 @@ font-weight: var(--fs-7);
     background: rgb(255, 219, 219);
   }
   .thumbnail img {
-    width: 150px;
+    width:100%;
     height: auto;
     border: 1px solid #ffffff;
     border-radius: 5px; }
@@ -763,8 +762,8 @@ margin: 0%;
       align-items: center;
       padding: 0%;
       border-radius: 0px;
-      border: 0px solid var(--white_a25);
-      background: black;
+
+      background: rgb(255, 255, 255);
 margin: 0px;
     }
     video {
@@ -772,8 +771,7 @@ margin: 0px;
       margin: 2%;
       display: block;
       border-radius: 5px;
-      box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
-   
+
     }
   
     .titles {
@@ -795,7 +793,7 @@ margin: 0px;
       width: 100%;
 margin: 0px;
     
-      border: 1px solid var(--white_a25);
+      border: 0px solid var(--white_a25);
       border-radius: 0px;
       flex-direction: column;
       align-items: center;
@@ -858,9 +856,9 @@ margin: 0px;
     }
 
     .thumbnail img {
-      width: 70px;
+      width: 65px;
       height: auto;
-      border: 2px solid ;
+      border: 0px solid ;
     }
 
     .alt-bubble {
@@ -882,7 +880,7 @@ margin: 0px;
 
   @media (min-width: 610px) and (max-width:1200px) {
     .thumbnail img {
-      width: 90px;
+      
       height: auto;
       border: 1px solid #f9d4d4;
 
